@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotorVerse — Premium Vehicles</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="loader">
+    <div class="loader-logo">MOTOR<span>VERSE</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+  <!-- Back to Top -->
+  <button id="back-top" aria-label="Back to top">↑</button>
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Toggle theme">☀</button>
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mob-overlay"></div>
+  <!-- Mobile Nav Drawer -->
+  <nav id="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="#showcase" class="mob-link">Models</a></li>
+      <li><a href="#categories" class="mob-link">Categories</a></li>
+      <li><a href="#featured" class="mob-link">Featured</a></li>
+      <li><a href="#gallery" class="mob-link">Gallery</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+    <button class="mobile-nav-cta mob-link">Book a Test Drive</button>
+    <div class="mobile-nav-socials">
+      <a href="#" class="mobile-social">in</a>
+      <a href="#" class="mobile-social">tw</a>
+      <a href="#" class="mobile-social">ig</a>
+      <a href="#" class="mobile-social">yt</a>
+    </div>
+  </nav>
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">MOTOR<span>VERSE</span></a>
+    <ul class="nav-links">
+      <li><a href="#showcase">Models</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- <button class="nav-cta">Book a Test Drive</button> -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to the Future of Driving</p>
+      <h5 class="hero-title">
+        BUILT TO
+        <span class="accent-line">DOMINATE</span>
+        THE ROAD
+      </h5>
+      <p class="hero-sub">
+        Explore our curated collection of the world's most extraordinary
+        vehicles — from hypercars to precision motorcycles.
+      </p>
+      <div class="hero-actions">
+        <a href="#showcase" class="btn-primary">Explore Models</a>
+        <a href="#gallery" class="btn-outline">View Gallery</a>
+      </div>
+      <p class="hero-pills-label">Preview a vehicle</p>
+      <div class="hero-vehicle-pills">
+        <button class="v-pill active" data-hero="0">Ferrari 296</button>
+        <button class="v-pill" data-hero="1">Bugatti Bolide</button>
+        <button class="v-pill" data-hero="2">Dodge Charger</button>
+        <button class="v-pill" data-hero="3">Harley Davidson</button>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS TICKER -->
+  <div id="stats-ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">Ferrari 296 Widebody<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Bugatti Bolide<span class="ticker-dot"></span></div>
+      <div class="ticker-item">BMW M4 CSL<span class="ticker-dot"></span></div>
+      <div class="ticker-item">1970 Dodge Charger<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Mercedes SL Roadster<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Harley Davidson<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Honda CB750<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Bugatti Type 37<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Ferrari 360 Modena<span class="ticker-dot"></span></div>
+      <div class="ticker-item">BMW M235i xDrive<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Ferrari 296 Widebody<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Bugatti Bolide<span class="ticker-dot"></span></div>
+      <div class="ticker-item">BMW M4 CSL<span class="ticker-dot"></span></div>
+      <div class="ticker-item">1970 Dodge Charger<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Mercedes SL Roadster<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Harley Davidson<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Honda CB750<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Bugatti Type 37<span class="ticker-dot"></span></div>
+      <div class="ticker-item">Ferrari 360 Modena<span class="ticker-dot"></span></div>
+      <div class="ticker-item">BMW M235i xDrive<span class="ticker-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- 3D SHOWCASE -->
+  <section id="showcase">
+    <div class="showcase-header">
+      <div>
+        <p class="section-eyebrow reveal">Interactive 3D Showroom</p>
+        <h2 class="section-title reveal">Drag. Spin.<br>Experience.</h2>
+        <p class="section-sub reveal" style="margin-top:12px;">Click &amp; drag to rotate. Scroll to zoom.</p>
+      </div>
+      <div class="showcase-tabs" id="showcase-tabs">
+        <button class="s-tab active" data-idx="0">Ferrari 296</button>
+        <button class="s-tab" data-idx="1">Bugatti Bolide</button>
+        <button class="s-tab" data-idx="2">BMW M4 CSL</button>
+        <button class="s-tab" data-idx="3">Mercedes SL</button>
+        <button class="s-tab" data-idx="4">Dodge Charger</button>
+        <button class="s-tab" data-idx="5">Ferrari 360</button>
+        <button class="s-tab" data-idx="6">BMW M235i</button>
+        <button class="s-tab" data-idx="7">Bugatti T37</button>
+        <button class="s-tab" data-idx="8">Harley</button>
+        <button class="s-tab" data-idx="9">Honda CB750</button>
+      </div>
+    </div>
+
+    <div class="model-stage">
+      <div class="model-loading" id="model-loading">
+        <div class="loading-spinner"></div>
+        <span>Loading model…</span>
+      </div>
+      <canvas id="model-canvas"></canvas>
+      <div class="model-info-overlay">
+        <div class="model-name" id="model-name">FERRARI 296</div>
+        <div class="model-tagline" id="model-tagline">WIDEBODY · V6 HYBRID · 830 HP</div>
+      </div>
+      <div class="model-controls-hint">
+        <span>🖱 Drag to rotate &nbsp;|&nbsp; Scroll to zoom</span>
+      </div>
+    </div>
+
+    <div class="spec-strip">
+      <div class="spec-item reveal">
+        <div class="spec-value" id="spec-hp">830<span>HP</span></div>
+        <div class="spec-label">Max Power</div>
+      </div>
+      <div class="spec-item reveal">
+        <div class="spec-value" id="spec-speed">330<span>km/h</span></div>
+        <div class="spec-label">Top Speed</div>
+      </div>
+      <div class="spec-item reveal">
+        <div class="spec-value" id="spec-accel">2.9<span>sec</span></div>
+        <div class="spec-label">0–100 km/h</div>
+      </div>
+      <div class="spec-item reveal">
+        <div class="spec-value" id="spec-weight">1470<span>kg</span></div>
+        <div class="spec-label">Dry Weight</div>
+      </div>
+      <div class="spec-item reveal">
+        <div class="spec-value" id="spec-price">&#8377;7.2<span>Cr</span></div>
+        <div class="spec-label">Starting Price</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <p class="section-eyebrow reveal">Browse by Category</p>
+    <h2 class="section-title reveal">Every Machine.<br>One Destination.</h2>
+    <p class="section-sub reveal">From track-bred hypercars to roaring classic bikes.</p>
+
+    <div class="cat-grid">
+      <div class="cat-card reveal">
+        <div class="cat-loading">
+          <div class="loading-spinner-sm"></div>
+        </div>
+        <canvas class="cat-card-canvas" id="cat-canvas-1"></canvas>
+        <div class="cat-card-info">
+          <div class="cat-number">01</div>
+          <div class="cat-label">Hypercars</div>
+          <div class="cat-count">Ferrari · Bugatti · BMW</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-loading">
+          <div class="loading-spinner-sm"></div>
+        </div>
+        <canvas class="cat-card-canvas" id="cat-canvas-2"></canvas>
+        <div class="cat-card-info">
+          <div class="cat-number">02</div>
+          <div class="cat-label">Classic Icons</div>
+          <div class="cat-count">Dodge · Mercedes · Bugatti T37</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-loading">
+          <div class="loading-spinner-sm"></div>
+        </div>
+        <canvas class="cat-card-canvas" id="cat-canvas-3"></canvas>
+        <div class="cat-card-info">
+          <div class="cat-number">03</div>
+          <div class="cat-label">Motorcycles</div>
+          <div class="cat-count">Harley · Honda CB750</div>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VEHICLE -->
+  <section id="featured">
+    <div class="featured-inner">
+      <div class="featured-left reveal-left">
+        <div class="featured-badge">
+          <span class="badge-dot"></span> Machine of the Decade
+        </div>
+        <p class="section-eyebrow">Editor's Pick</p>
+        <h2 class="section-title">BUGATTI<br>BOLIDE</h2>
+        <p class="section-sub">
+          The most extreme Bugatti ever built. A 1,824 HP W16 engine
+          wrapped in a body so aerodynamic it generates more downforce
+          than a Formula 1 car. A living sculpture of speed.
+        </p>
+        <div class="featured-specs">
+          <div class="f-spec">
+            <div class="f-spec-value">1,824HP</div>
+            <div class="f-spec-label">Engine Output</div>
+          </div>
+          <div class="f-spec">
+            <div class="f-spec-value">500km/h</div>
+            <div class="f-spec-label">Top Speed</div>
+          </div>
+          <div class="f-spec">
+            <div class="f-spec-value">1,240kg</div>
+            <div class="f-spec-label">Dry Weight</div>
+          </div>
+          <div class="f-spec">
+            <div class="f-spec-value">2.17s</div>
+            <div class="f-spec-label">0–100 km/h</div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Reserve Yours</a>
+          <a href="#showcase" class="btn-outline">View in 3D</a>
+        </div>
+      </div>
+      <div class="featured-right reveal-right">
+        <div class="model-loading" id="feat-loading">
+          <div class="loading-spinner"></div>
+          <span>Loading Bugatti Bolide…</span>
+        </div>
+        <canvas id="featured-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS STRIP -->
+  <div id="brands">
+    <p class="brands-label">Our Premium Brands</p>
+    <div class="brands-row">
+      <div class="brand-name">FERRARI</div>
+      <div class="brand-name">BUGATTI</div>
+      <div class="brand-name">BMW</div>
+      <div class="brand-name">MERCEDES</div>
+      <div class="brand-name">DODGE</div>
+      <div class="brand-name">HARLEY</div>
+      <div class="brand-name">HONDA</div>
+    </div>
+  </div>
+
+  <!-- STATS COUNTER -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-block reveal">
+        <div class="stat-num"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">3D Models Live</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num"><span class="counter" data-target="7">0</span><span class="stat-suffix"></span></div>
+        <div class="stat-label">Premium Brands</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num"><span class="counter" data-target="1824">0</span><span class="stat-suffix">HP</span></div>
+        <div class="stat-label">Most Powerful Model</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num"><span class="counter" data-target="500">0</span><span class="stat-suffix">km/h</span>
+        </div>
+        <div class="stat-label">Top Speed (Bugatti)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT -->
+  <section id="spotlight">
+    <p class="section-eyebrow reveal">Why MotorVerse</p>
+    <h2 class="section-title reveal">The Difference<br>is the Details.</h2>
+    <div class="spotlight-grid">
+      <div class="spotlight-card reveal">
+        <div class="sp-number">01</div>
+        <div class="sp-icon">🏎️</div>
+        <div class="sp-title">REAL 3D MODELS</div>
+        <div class="sp-desc">Every vehicle you see is a real photorealistic 3D model — rotate, zoom and inspect every
+          angle before you decide.</div>
+        <a href="#showcase" class="sp-link">Try the Showroom →</a>
+      </div>
+      <div class="spotlight-card reveal">
+        <div class="sp-number">02</div>
+        <div class="sp-icon">🛡️</div>
+        <div class="sp-title">CERTIFIED QUALITY</div>
+        <div class="sp-desc">Every vehicle passes a 150-point inspection by factory-trained technicians. Full service
+          history. Zero compromises.</div>
+        <a href="#process" class="sp-link">Our process →</a>
+      </div>
+      <div class="spotlight-card reveal">
+        <div class="sp-number">03</div>
+        <div class="sp-icon">🚚</div>
+        <div class="sp-title">WHITE-GLOVE DELIVERY</div>
+        <div class="sp-desc">Enclosed transporter, climate-controlled storage and a personal handover specialist —
+          anywhere in India.</div>
+        <a href="#contact" class="sp-link">Book delivery →</a>
+      </div>
+      <div class="spotlight-card reveal">
+        <div class="sp-number">04</div>
+        <div class="sp-icon">💰</div>
+        <div class="sp-title">BESPOKE FINANCING</div>
+        <div class="sp-desc">EMI plans starting at 0% for 6 months. Partnered with 14 NBFCs for instant approval, even
+          for hypercars.</div>
+        <a href="#contact" class="sp-link">Explore plans →</a>
+      </div>
+      <div class="spotlight-card reveal">
+        <div class="sp-number">05</div>
+        <div class="sp-icon">🏁</div>
+        <div class="sp-title">TRACK DAY EVENTS</div>
+        <div class="sp-desc">Push your shortlisted machines at our exclusive track days held quarterly across Mumbai,
+          Delhi and Bangalore.</div>
+        <a href="#contact" class="sp-link">Register interest →</a>
+      </div>
+      <div class="spotlight-card reveal">
+        <div class="sp-number">06</div>
+        <div class="sp-icon">⚡</div>
+        <div class="sp-title">HYBRID & EV RANGE</div>
+        <div class="sp-desc">From Ferrari's V6 hybrid to full-electric concepts — performance meets responsibility in
+          our future fleet.</div>
+        <a href="#categories" class="sp-link">View hybrid →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <p class="section-eyebrow reveal">The MotorVerse Way</p>
+    <h2 class="section-title reveal">From Dream<br>to Driveway</h2>
+    <div class="process-grid">
+      <div class="p-step reveal">
+        <div class="p-step-num">01</div>
+        <div class="p-step-icon">🔍</div>
+        <div class="p-step-title">Discover</div>
+        <div class="p-step-desc">Browse real 3D models — drag, rotate and zoom every detail before deciding.</div>
+      </div>
+      <div class="p-step reveal">
+        <div class="p-step-num">02</div>
+        <div class="p-step-icon">🤝</div>
+        <div class="p-step-title">Consult</div>
+        <div class="p-step-desc">Our expert concierge guides you through financing, customization and import logistics.
+        </div>
+      </div>
+      <div class="p-step reveal">
+        <div class="p-step-num">03</div>
+        <div class="p-step-icon">🏎️</div>
+        <div class="p-step-title">Test Drive</div>
+        <div class="p-step-desc">Experience your shortlisted vehicle at a premium showroom or our track day events.
+        </div>
+      </div>
+      <div class="p-step reveal">
+        <div class="p-step-num">04</div>
+        <div class="p-step-icon">🚀</div>
+        <div class="p-step-title">Deliver</div>
+        <div class="p-step-desc">White-glove enclosed delivery, anywhere in India. Your machine, perfectly prepared.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <p class="section-eyebrow reveal">The Collection</p>
+    <h2 class="section-title reveal">Speed is Art.</h2>
+    <div class="gallery-grid">
+      <!-- Row 1: 3 equal cells -->
+      <div class="g-cell reveal">
+        <div class="g-cell-inner">
+          <div class="cat-loading">
+            <div class="loading-spinner-sm"></div>
+          </div>
+          <canvas id="g-canvas-1" class="g-canvas"></canvas>
+          <div class="g-overlay"><span class="g-label">Ferrari 296 Widebody</span></div>
+        </div>
+      </div>
+      <div class="g-cell reveal">
+        <div class="g-cell-inner">
+          <div class="cat-loading">
+            <div class="loading-spinner-sm"></div>
+          </div>
+          <canvas id="g-canvas-2" class="g-canvas"></canvas>
+          <div class="g-overlay"><span class="g-label">Honda CB750 · 1970</span></div>
+        </div>
+      </div>
+      <div class="g-cell reveal">
+        <div class="g-cell-inner">
+          <div class="cat-loading">
+            <div class="loading-spinner-sm"></div>
+          </div>
+          <canvas id="g-canvas-3" class="g-canvas"></canvas>
+          <div class="g-overlay"><span class="g-label">BMW M235i xDrive · 2019</span></div>
+        </div>
+      </div>
+      <!-- Row 2: 4 equal cells in their own sub-grid wrapper -->
+      <div class="gallery-row2">
+        <div class="g-cell reveal">
+          <div class="g-cell-inner">
+            <div class="cat-loading">
+              <div class="loading-spinner-sm"></div>
+            </div>
+            <canvas id="g-canvas-4" class="g-canvas"></canvas>
+            <div class="g-overlay"><span class="g-label">Bugatti Type 37 · Classic</span></div>
+          </div>
+        </div>
+        <div class="g-cell reveal">
+          <div class="g-cell-inner">
+            <div class="cat-loading">
+              <div class="loading-spinner-sm"></div>
+            </div>
+            <canvas id="g-canvas-5" class="g-canvas"></canvas>
+            <div class="g-overlay"><span class="g-label">Harley Davidson</span></div>
+          </div>
+        </div>
+        <div class="g-cell reveal">
+          <div class="g-cell-inner">
+            <div class="cat-loading">
+              <div class="loading-spinner-sm"></div>
+            </div>
+            <canvas id="g-canvas-6" class="g-canvas"></canvas>
+            <div class="g-overlay"><span class="g-label">1970 Dodge Charger RT</span></div>
+          </div>
+        </div>
+        <div class="g-cell reveal">
+          <div class="g-cell-inner">
+            <div class="cat-loading">
+              <div class="loading-spinner-sm"></div>
+            </div>
+            <canvas id="g-canvas-7" class="g-canvas"></canvas>
+            <div class="g-overlay"><span class="g-label">Mercedes SL Roadster</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section id="compare">
+    <p class="section-eyebrow reveal">Side by Side</p>
+    <h2 class="section-title reveal">Compare Our<br>Top Machines.</h2>
+    <div style="overflow-x:auto; margin-top:60px;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Ferrari 296</th>
+            <th>Bugatti Bolide</th>
+            <th>BMW M4 CSL</th>
+            <th>Dodge Charger RT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Type</td>
+            <td class="highlight-col">Hypercar · Hybrid</td>
+            <td>Track Hypercar</td>
+            <td>Sport Coupe</td>
+            <td>Muscle Car</td>
+          </tr>
+          <tr>
+            <td>Engine</td>
+            <td class="highlight-col">V6 Turbo Hybrid</td>
+            <td>W16 Quad-Turbo</td>
+            <td>Inline-6 Bi-Turbo</td>
+            <td>V8 HEMI</td>
+          </tr>
+          <tr>
+            <td>Power</td>
+            <td class="highlight-col">830 HP</td>
+            <td class="compare-best">1,824 HP</td>
+            <td>550 HP</td>
+            <td>375 HP</td>
+          </tr>
+          <tr>
+            <td>Top Speed</td>
+            <td class="highlight-col">330 km/h</td>
+            <td class="compare-best">500 km/h</td>
+            <td>307 km/h</td>
+            <td>250 km/h</td>
+          </tr>
+          <tr>
+            <td>0–100 km/h</td>
+            <td class="highlight-col">2.9 sec</td>
+            <td class="compare-best">2.17 sec</td>
+            <td>3.7 sec</td>
+            <td>5.4 sec</td>
+          </tr>
+          <tr>
+            <td>Origin</td>
+            <td class="highlight-col">Italy</td>
+            <td>France</td>
+            <td>Germany</td>
+            <td>USA</td>
+          </tr>
+          <tr>
+            <td>Era</td>
+            <td class="highlight-col">2022</td>
+            <td>2021</td>
+            <td>2022</td>
+            <td>1970</td>
+          </tr>
+          <tr>
+            <td>Availability</td>
+            <td class="highlight-col"><span style="color:var(--accent)">● In Stock</span></td>
+            <td><span style="color:var(--accent)">● In Stock</span></td>
+            <td><span style="color:var(--accent)">● In Stock</span></td>
+            <td><span style="color:#aaa">● On Order</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <p class="section-eyebrow">What Owners Say</p>
+    <h2 class="section-title">The Verdict</h2>
+    <div class="testi-slider">
+      <div class="testi-slide active">
+        <p class="testi-quote">The Ferrari 296 Widebody is not a car — it's a statement. MotorVerse made the whole
+          process seamless.</p>
+        <p class="testi-author"><strong>Arjun Mehta</strong> — Ferrari 296 Owner, Mumbai</p>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">Seeing the Bugatti Bolide in 3D before buying it? Game-changing. The model matched
+          reality perfectly.</p>
+        <p class="testi-author"><strong>Priya Sharma</strong> — Bugatti Bolide Owner, Bangalore</p>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">The 1970 Dodge Charger was a dream. MotorVerse found it, restored it, and delivered it to
+          my garage.</p>
+        <p class="testi-author"><strong>Rahul Sood</strong> — Dodge Charger RT Owner, Delhi</p>
+      </div>
+      <div class="testi-dots">
+        <div class="t-dot active" data-idx="0"></div>
+        <div class="t-dot" data-idx="1"></div>
+        <div class="t-dot" data-idx="2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-eyebrow reveal">Get in Touch</p>
+    <h2 class="section-title reveal">Book Your<br>Test Drive.</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="contact-detail">
+          <div class="c-icon">📍</div>
+          <div>
+            <div class="c-label">Showroom</div>
+            <div class="c-value">MotorVerse Hub, Lower Parel,<br>Mumbai — 400 013</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">📞</div>
+          <div>
+            <div class="c-label">Call Us</div>
+            <div class="c-value">+91 98765 43210</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">✉️</div>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-value">hello@motorverse.in</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">🕐</div>
+          <div>
+            <div class="c-label">Hours</div>
+            <div class="c-value">Mon–Sat: 10am – 8pm &nbsp;|&nbsp; Sun: 11am – 6pm</div>
+          </div>
+        </div>
+        <div class="contact-canvas-wrap" style="position:relative;">
+          <div class="cat-loading" id="contact-load">
+            <div class="loading-spinner-sm"></div>
+          </div>
+          <canvas id="contact-canvas" style="width:100%;height:100%;display:block;"></canvas>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Arjun" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Mehta" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input type="email" placeholder="arjun@email.com" /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210" /></div>
+        </div>
+        <div class="form-group">
+          <label>Vehicle of Interest</label>
+          <select>
+            <option value="">— Select a vehicle —</option>
+            <option>Ferrari 296 Widebody</option>
+            <option>Bugatti Bolide</option>
+            <option>BMW M4 CSL</option>
+            <option>Mercedes SL Roadster</option>
+            <option>1970 Dodge Charger RT</option>
+            <option>Ferrari 360 Modena</option>
+            <option>BMW M235i xDrive</option>
+            <option>Bugatti Type 37</option>
+            <option>Harley Davidson</option>
+            <option>Honda CB750 Super Sport</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Preferred Date</label><input type="date" /></div>
+          <div class="form-group">
+            <label>Location</label>
+            <select>
+              <option>Mumbai</option>
+              <option>Delhi</option>
+              <option>Bangalore</option>
+              <option>Pune</option>
+              <option>Hyderabad</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Message (optional)</label>
+          <textarea placeholder="Tell us about your dream vehicle or any special requirements..."></textarea>
+        </div>
+        <button class="form-submit" id="form-submit-btn">Book Test Drive →</button>
+        <p class="form-note">🔒 Your details are private. We never share or sell data.</p>
+        <div id="form-success"
+          style="display:none;margin-top:20px;padding:20px;background:rgba(26,122,60,0.15);border:1px solid #1a7a3c;text-align:center;">
+          <p
+            style="color:#4caf50;font-family:var(--font-ui);letter-spacing:2px;text-transform:uppercase;font-size:0.85rem;">
+            ✓ Request Received! We'll call you within 2 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div id="newsletter">
+    <div class="nl-text">
+      <p class="section-eyebrow">Stay in the Loop</p>
+      <h3>New arrivals. Track days.<br>Exclusive drops.</h3>
+    </div>
+    <div class="nl-form">
+      <input class="nl-input" type="email" placeholder="your@email.com" id="nl-input" />
+      <button class="nl-btn" id="nl-btn">Subscribe</button>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div id="cta-banner">
+    <div class="cta-text">
+      <p class="section-eyebrow">Ready to Drive?</p>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,4rem);color:#fff;">Your Dream Machine<br>Awaits.</h2>
+    </div>
+    <a href="#contact" class="btn-white">Book a Test Drive →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#">MOTOR<span>VERSE</span></a>
+        <p>The world's most immersive premium vehicle destination. Discover, configure and own the machine of your
+          dreams.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Our Fleet</p>
+        <ul>
+          <li><a href="#">Ferrari Collection</a></li>
+          <li><a href="#">Bugatti Collection</a></li>
+          <li><a href="#">BMW Sports</a></li>
+          <li><a href="#">Classic Muscle</a></li>
+          <li><a href="#">Motorcycles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="#">3D Showroom</a></li>
+          <li><a href="#">Test Drives</a></li>
+          <li><a href="#">Financing</a></li>
+          <li><a href="#">White-Glove Delivery</a></li>
+          <li><a href="#">Track Days</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Showrooms</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 MotorVerse. All rights reserved. Built with passion for machines.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">tw</a>
+        <a href="#" class="social-link">ig</a>
+        <a href="#" class="social-link">yt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    /* ============================================================
+       GLTFLoader (inline — no import map needed)
+       ============================================================ */
+    THREE.GLTFLoader = (function () {
+      function GLTFLoader(manager) {
+        THREE.Loader.call(this, manager);
+      }
+      GLTFLoader.prototype = Object.assign(Object.create(THREE.Loader.prototype), {
+        constructor: GLTFLoader,
+        load: function (url, onLoad, onProgress, onError) {
+          const scope = this;
+          const loader = new THREE.FileLoader(scope.manager);
+          loader.setPath(scope.path);
+          loader.setResponseType('arraybuffer');
+          loader.setRequestHeader(scope.requestHeader);
+          loader.setWithCredentials(scope.withCredentials);
+          loader.load(url, function (data) {
+            try { scope.parse(data, '', onLoad, onError); }
+            catch (e) { if (onError) onError(e); else throw e; }
+          }, onProgress, onError);
+        },
+        parse: function (data, path, onLoad, onError) {
+          // Use the native three.js GLTF parser via dynamic import fallback
+          // We load via THREE's built-in fetch mechanism
+          const magic = new Uint8Array(data, 0, 4);
+          const isBinary = magic[0] === 0x67 && magic[1] === 0x6C && magic[2] === 0x54 && magic[3] === 0x46;
+          let json;
+          if (isBinary) {
+            const header = new DataView(data, 0, 12);
+            const jsonLen = new DataView(data, 12, 8).getUint32(0, true);
+            const jsonData = new Uint8Array(data, 20, jsonLen);
+            json = JSON.parse(new TextDecoder().decode(jsonData));
+            json._binaryChunk = data;
+            json._binaryOffset = 20 + jsonLen + 8;
+          } else {
+            json = JSON.parse(new TextDecoder().decode(new Uint8Array(data)));
+          }
+          // Delegate to THREE's ObjectLoader for simple parsing
+          // For real GLB we need a proper parser — use dynamic script load
+          onError && onError(new Error('Use loadGLTF helper instead'));
+        }
+      });
+      return GLTFLoader;
+    })();
+
+    /* ============================================================
+       PROPER GLTF LOADER via three/examples
+       We inject the ES-module loader at runtime
+       ============================================================ */
+    const GLTFLoaderURL = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';
+    const DRACOLoaderURL = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js';
+
+    function loadScript(url) {
+      return new Promise((res, rej) => {
+        if (document.querySelector(`script[src="${url}"]`)) { res(); return; }
+        const s = document.createElement('script');
+        s.src = url; s.onload = res; s.onerror = rej;
+        document.head.appendChild(s);
+      });
+    }
+
+    /* ============================================================
+       SCENE HELPERS
+       ============================================================ */
+    function buildScene(canvas) {
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.2;
+
+      const scene = new THREE.Scene();
+      const W = canvas.clientWidth || 800;
+      const H = canvas.clientHeight || 500;
+      const camera = new THREE.PerspectiveCamera(40, W / H, 0.01, 1000);
+      camera.position.set(0, 1.2, 5);
+
+      // Lights
+      const amb = new THREE.AmbientLight(0xffffff, 0.6);
+      const key = new THREE.DirectionalLight(0xffffff, 1.8);
+      key.position.set(5, 8, 5); key.castShadow = true;
+      const fill = new THREE.DirectionalLight(0x7799ff, 0.5);
+      fill.position.set(-5, 4, -3);
+      const rim = new THREE.DirectionalLight(0xff3333, 0.4);
+      rim.position.set(2, -1, -6);
+      const top = new THREE.PointLight(0xffffff, 0.6, 30);
+      top.position.set(0, 10, 0);
+      scene.add(amb, key, fill, rim, top);
+
+      // Floor
+      const floor = new THREE.Mesh(
+        new THREE.PlaneGeometry(30, 30),
+        new THREE.MeshStandardMaterial({ color: 0x0d0d0d, metalness: 0.9, roughness: 0.3 })
+      );
+      floor.rotation.x = -Math.PI / 2;
+      floor.position.y = -0.001;
+      floor.receiveShadow = true;
+      scene.add(floor);
+
+      // Grid
+      const grid = new THREE.GridHelper(20, 20, 0x1f1f1f, 0x161616);
+      scene.add(grid);
+
+      // Resize
+      const resize = () => {
+        const w = canvas.clientWidth || canvas.offsetWidth;
+        const h = canvas.clientHeight || canvas.offsetHeight;
+        if (!w || !h) return;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      };
+      resize();
+      window.addEventListener('resize', resize);
+
+      return { renderer, scene, camera, resize };
+    }
+
+    function centerModel(obj) {
+      const box = new THREE.Box3().setFromObject(obj);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const scale = 2.2 / maxDim;
+      obj.scale.setScalar(scale);
+      obj.position.sub(center.multiplyScalar(scale));
+      obj.position.y -= box.min.y * scale;
+      // ensure wheels sit on floor
+      const box2 = new THREE.Box3().setFromObject(obj);
+      obj.position.y -= box2.min.y;
+    }
+
+    /* OrbitControls (inline minimal) */
+    function addOrbitControls(camera, domEl) {
+      let isDown = false, prevX = 0, prevY = 0;
+      let rotY = 0, rotX = 0.12, dist = camera.position.length();
+      let targetY = rotY, targetX = rotX, targetDist = dist;
+
+      const getXY = e => e.touches
+        ? [e.touches[0].clientX, e.touches[0].clientY]
+        : [e.clientX, e.clientY];
+
+      domEl.addEventListener('mousedown', e => { isDown = true;[prevX, prevY] = getXY(e); });
+      domEl.addEventListener('touchstart', e => { isDown = true;[prevX, prevY] = getXY(e); });
+      window.addEventListener('mouseup', () => isDown = false);
+      window.addEventListener('touchend', () => isDown = false);
+
+      window.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        const [x, y] = getXY(e);
+        targetY += (x - prevX) * 0.008;
+        targetX += (y - prevY) * 0.005;
+        targetX = Math.max(-0.35, Math.min(0.5, targetX));
+        prevX = x; prevY = y;
+      });
+      window.addEventListener('touchmove', e => {
+        if (!isDown) return;
+        const [x, y] = getXY(e);
+        targetY += (x - prevX) * 0.008;
+        targetX += (y - prevY) * 0.005;
+        targetX = Math.max(-0.35, Math.min(0.5, targetX));
+        prevX = x; prevY = y;
+      });
+
+      domEl.addEventListener('wheel', e => {
+        targetDist += e.deltaY * 0.01;
+        targetDist = Math.max(2, Math.min(10, targetDist));
+        e.preventDefault();
+      }, { passive: false });
+
+      let autoRotate = true;
+      domEl.addEventListener('mousedown', () => autoRotate = false);
+      domEl.addEventListener('touchstart', () => autoRotate = false);
+
+      return {
+        update: () => {
+          if (autoRotate) targetY += 0.004;
+          rotY += (targetY - rotY) * 0.08;
+          rotX += (targetX - rotX) * 0.08;
+          dist += (targetDist - dist) * 0.08;
+          camera.position.x = dist * Math.sin(rotY) * Math.cos(rotX);
+          camera.position.y = dist * Math.sin(rotX) + 0.8;
+          camera.position.z = dist * Math.cos(rotY) * Math.cos(rotX);
+          camera.lookAt(0, 0.5, 0);
+        }
+      };
+    }
+
+    /* ============================================================
+       VEHICLE DATA
+       ============================================================ */
+    const VEHICLES = [
+      { file: 'ferrari_296_widebody.glb', name: 'FERRARI 296', tag: 'WIDEBODY · V6 HYBRID · 830 HP', hp: '830', speed: '330', accel: '2.9', weight: '1470', price: '₹7.2' },
+      { file: 'bugatti_bolide.glb', name: 'BUGATTI BOLIDE', tag: 'W16 QUAD-TURBO · 1,824 HP', hp: '1824', speed: '500', accel: '2.2', weight: '1240', price: '₹120' },
+      { file: 'bmw_m4csl.glb', name: 'BMW M4 CSL', tag: 'INLINE-6 BI-TURBO · 550 HP', hp: '550', speed: '307', accel: '3.7', weight: '1625', price: '₹2.1' },
+      { file: 'mercedes_sl_roadster.glb', name: 'MERCEDES SL', tag: 'ROADSTER · V8 BITURBO · 585 HP', hp: '585', speed: '295', accel: '3.5', weight: '1840', price: '₹2.5' },
+      { file: '1970_dodge_charger_rt_fast__furious.glb', name: 'DODGE CHARGER', tag: 'RT · V8 HEMI · 375 HP · 1970', hp: '375', speed: '250', accel: '5.4', weight: '1765', price: '₹45L' },
+      { file: '1999_ferrari_360_modena.glb', name: 'FERRARI 360', tag: 'MODENA · V8 · 400 HP · 1999', hp: '400', speed: '295', accel: '4.5', weight: '1390', price: '₹1.8' },
+      { file: '2019_bmw_m235i_xdrive_gran_coupe.glb', name: 'BMW M235i', tag: 'XDRIVE GRAN COUPE · 306 HP', hp: '306', speed: '250', accel: '4.9', weight: '1625', price: '₹55L' },
+      { file: 'bugatti_type_37.glb', name: 'BUGATTI TYPE 37', tag: 'CLASSIC · SUPERCHARGED · 1925', hp: '95', speed: '190', accel: '8.0', weight: '750', price: '₹25' },
+      { file: 'harley_motorcycle_free_download.glb', name: 'HARLEY DAVIDSON', tag: 'V-TWIN · CLASSIC CRUISER', hp: '78', speed: '180', accel: '4.2', weight: '317', price: '₹22L' },
+      { file: 'honda_cb_750_f_super_sport_1970.glb', name: 'HONDA CB750', tag: 'SUPER SPORT · INLINE-4 · 1970', hp: '67', speed: '200', accel: '5.2', weight: '218', price: '₹8L' },
+    ];
+
+    /* ============================================================
+       MODEL CACHE
+       ============================================================ */
+    const modelCache = {};
+
+    function loadModel(filename, onLoad, onProgress) {
+      if (modelCache[filename]) { onLoad(modelCache[filename].clone()); return; }
+      const loader = new THREE.GLTFLoader();
+      loader.load(
+        filename,
+        gltf => {
+          const model = gltf.scene;
+          model.traverse(n => { if (n.isMesh) { n.castShadow = true; n.receiveShadow = true; } });
+          modelCache[filename] = model;
+          onLoad(model.clone());
+        },
+        onProgress,
+        err => console.warn('Model load error:', filename, err)
+      );
+    }
+
+    /* ============================================================
+       LOADER INIT
+       ============================================================ */
+    window.addEventListener('DOMContentLoaded', () => {
+      loadScript(GLTFLoaderURL).then(() => {
+        initAll();
+      }).catch(e => {
+        console.error('GLTFLoader script failed:', e);
+      });
+    });
+
+    function initAll() {
+      initLoader();
+      initCursor();
+      initNav();
+      initReveal();
+      initScrollProgress();
+      initBackTop();
+      initTheme();
+      initMobileNav();
+      initHero();
+      initShowcase();
+      initCatCards();
+      initFeatured();
+      initGallery();
+      initContactCanvas();
+      initTestimonials();
+      initCounters();
+      initContactForm();
+      initNewsletter();
+      initParticles();
+    }
+
+    /* ============================================================
+       PAGE LOADER
+       ============================================================ */
+    function initLoader() {
+      const loader = document.getElementById('loader');
+      const pct = document.getElementById('loader-pct');
+      let n = 0;
+      const iv = setInterval(() => {
+        n = Math.min(n + Math.random() * 6 + 2, 100);
+        pct.textContent = Math.floor(n) + '%';
+        if (n >= 100) {
+          clearInterval(iv);
+          setTimeout(() => {
+            loader.style.transition = 'opacity 0.7s';
+            loader.style.opacity = '0';
+            setTimeout(() => loader.remove(), 800);
+          }, 400);
+        }
+      }, 60);
+    }
+
+    /* ============================================================
+       CURSOR
+       ============================================================ */
+    function initCursor() {
+      const cur = document.getElementById('cursor');
+      const ring = document.getElementById('cursor-ring');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+      const loop = () => {
+        requestAnimationFrame(loop);
+        rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
+        cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      };
+      loop();
+    }
+
+    /* ============================================================
+       NAVBAR
+       ============================================================ */
+    function initNav() {
+      const nav = document.getElementById('navbar');
+      const ham = document.getElementById('hamburger');
+      window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+      ham.addEventListener('click', () => ham.classList.toggle('open'));
+    }
+
+    /* ============================================================
+       REVEAL ON SCROLL
+       ============================================================ */
+    function initReveal() {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => io.observe(el));
+    }
+
+    /* ============================================================
+       SCROLL PROGRESS
+       ============================================================ */
+    function initScrollProgress() {
+      const bar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        bar.style.width = (window.scrollY / (h.scrollHeight - h.clientHeight) * 100) + '%';
+      });
+    }
+
+    /* ============================================================
+       BACK TO TOP
+       ============================================================ */
+    function initBackTop() {
+      const btn = document.getElementById('back-top');
+      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    /* ============================================================
+       THEME TOGGLE
+       ============================================================ */
+    function initTheme() {
+      const btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        btn.textContent = document.body.classList.contains('light-theme') ? '🌙' : '☀';
+      });
+    }
+
+    /* ============================================================
+       MOBILE NAV
+       ============================================================ */
+    function initMobileNav() {
+      const ham = document.getElementById('hamburger');
+      const nav = document.getElementById('mobile-nav');
+      const ovl = document.getElementById('mob-overlay');
+      const open = () => { nav.classList.add('open'); ovl.classList.add('open'); document.body.style.overflow = 'hidden'; };
+      const close = () => { nav.classList.remove('open'); ovl.classList.remove('open'); document.body.style.overflow = ''; ham.classList.remove('open'); };
+      ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.contains('open') ? close() : open(); });
+      ovl.addEventListener('click', close);
+      document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', close));
+    }
+
+    /* ============================================================
+       HERO — cycles through 4 cars
+       ============================================================ */
+    function initHero() {
+      const canvas = document.getElementById('hero-canvas');
+      const { renderer, scene, camera } = buildScene(canvas);
+      const controls = addOrbitControls(camera, canvas);
+      const heroVehicles = [0, 1, 4, 8]; // ferrari296, bugatti bolide, dodge, harley
+      let currentMesh = null;
+
+      const loadHeroVehicle = (idx) => {
+        if (currentMesh) { scene.remove(currentMesh); currentMesh = null; }
+        loadModel(VEHICLES[heroVehicles[idx]].file, model => {
+          centerModel(model);
+          scene.add(model);
+          currentMesh = model;
+        });
+      };
+      loadHeroVehicle(0);
+
+      document.querySelectorAll('.v-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.v-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          loadHeroVehicle(+pill.dataset.hero);
+        });
+      });
+
+      const tick = () => {
+        requestAnimationFrame(tick);
+        controls.update();
+        renderer.render(scene, camera);
+      };
+      tick();
+    }
+
+    /* ============================================================
+       MAIN SHOWCASE
+       ============================================================ */
+    function initShowcase() {
+      const canvas = document.getElementById('model-canvas');
+      const loading = document.getElementById('model-loading');
+      const { renderer, scene, camera } = buildScene(canvas);
+      const controls = addOrbitControls(camera, canvas);
+      let mesh = null;
+
+      const updateSpecs = (v) => {
+        document.getElementById('model-name').textContent = v.name;
+        document.getElementById('model-tagline').textContent = v.tag;
+        document.getElementById('spec-hp').innerHTML = v.hp + '<span>HP</span>';
+        document.getElementById('spec-speed').innerHTML = v.speed + '<span>km/h</span>';
+        document.getElementById('spec-accel').innerHTML = v.accel + '<span>sec</span>';
+        document.getElementById('spec-weight').innerHTML = v.weight + '<span>kg</span>';
+        document.getElementById('spec-price').innerHTML = v.price + '<span>Cr</span>';
+      };
+
+      const loadVehicle = (idx) => {
+        if (mesh) { scene.remove(mesh); mesh = null; }
+        loading.style.display = 'flex';
+        loadModel(VEHICLES[idx].file, model => {
+          centerModel(model);
+          scene.add(model);
+          mesh = model;
+          loading.style.display = 'none';
+          updateSpecs(VEHICLES[idx]);
+        }, xhr => {
+          if (xhr.total) loading.querySelector('span').textContent =
+            'Loading ' + Math.round(xhr.loaded / xhr.total * 100) + '%';
+        });
+      };
+      loadVehicle(0);
+
+      document.querySelectorAll('.s-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.s-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          loadVehicle(+tab.dataset.idx);
+        });
+      });
+
+      const tick = () => {
+        requestAnimationFrame(tick);
+        controls.update();
+        renderer.render(scene, camera);
+      };
+      tick();
+    }
+
+    /* ============================================================
+       CATEGORY CARDS
+       ============================================================ */
+    function initCatCards() {
+      // Cat 1: Bugatti Bolide (hypercar)
+      // Cat 2: Dodge Charger (classic)
+      // Cat 3: Honda CB750 (motorcycle)
+      const cats = [
+        { id: 'cat-canvas-1', idx: 1 },
+        { id: 'cat-canvas-2', idx: 4 },
+        { id: 'cat-canvas-3', idx: 9 },
+      ];
+      cats.forEach(c => {
+        const canvas = document.getElementById(c.id);
+        if (!canvas) return;
+        const { renderer, scene, camera } = buildScene(canvas);
+        const controls = addOrbitControls(camera, canvas);
+        loadModel(VEHICLES[c.idx].file, model => {
+          centerModel(model);
+          scene.add(model);
+          const load = canvas.parentElement.querySelector('.cat-loading');
+          if (load) load.style.display = 'none';
+        });
+        const tick = () => { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); };
+        tick();
+      });
+    }
+
+    /* ============================================================
+       FEATURED — Bugatti Bolide
+       ============================================================ */
+    function initFeatured() {
+      const canvas = document.getElementById('featured-canvas');
+      const loading = document.getElementById('feat-loading');
+      const { renderer, scene, camera } = buildScene(canvas);
+      const controls = addOrbitControls(camera, canvas);
+      loadModel(VEHICLES[1].file, model => {
+        centerModel(model);
+        scene.add(model);
+        if (loading) loading.style.display = 'none';
+      });
+      const tick = () => { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); };
+      tick();
+    }
+
+    /* ============================================================
+       GALLERY
+       ============================================================ */
+    function initGallery() {
+      const gallery = [
+        { id: 'g-canvas-1', idx: 0 },  // ferrari 296
+        { id: 'g-canvas-2', idx: 9 },  // honda cb750
+        { id: 'g-canvas-3', idx: 6 },  // bmw m235i
+        { id: 'g-canvas-4', idx: 7 },  // bugatti type 37
+        { id: 'g-canvas-5', idx: 8 },  // harley
+        { id: 'g-canvas-6', idx: 4 },  // dodge charger
+        { id: 'g-canvas-7', idx: 3 },  // mercedes sl
+      ];
+      gallery.forEach(g => {
+        const canvas = document.getElementById(g.id);
+        if (!canvas) return;
+        const { renderer, scene, camera } = buildScene(canvas);
+        const controls = addOrbitControls(camera, canvas);
+        loadModel(VEHICLES[g.idx].file, model => {
+          centerModel(model);
+          scene.add(model);
+          const load = canvas.closest('.g-cell-inner')?.querySelector('.cat-loading');
+          if (load) load.style.display = 'none';
+        });
+        const tick = () => { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); };
+        tick();
+      });
+    }
+
+    /* ============================================================
+       CONTACT CANVAS — Mercedes SL
+       ============================================================ */
+    function initContactCanvas() {
+      const canvas = document.getElementById('contact-canvas');
+      if (!canvas) return;
+      const { renderer, scene, camera } = buildScene(canvas);
+      const controls = addOrbitControls(camera, canvas);
+      loadModel(VEHICLES[3].file, model => {
+        centerModel(model);
+        scene.add(model);
+        const load = document.getElementById('contact-load');
+        if (load) load.style.display = 'none';
+      });
+      const tick = () => { requestAnimationFrame(tick); controls.update(); renderer.render(scene, camera); };
+      tick();
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    function initTestimonials() {
+      const slides = document.querySelectorAll('.testi-slide');
+      const dots = document.querySelectorAll('.t-dot');
+      let cur = 0, timer;
+      const go = idx => {
+        slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
+        cur = idx;
+        slides[cur].classList.add('active'); dots[cur].classList.add('active');
+      };
+      const play = () => { timer = setInterval(() => go((cur + 1) % slides.length), 5000); };
+      dots.forEach(d => { d.addEventListener('click', () => { clearInterval(timer); go(+d.dataset.idx); play(); }); });
+      play();
+    }
+
+    /* ============================================================
+       COUNTERS
+       ============================================================ */
+    function initCounters() {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const el = e.target, target = +el.dataset.target, step = target / (2000 / 16);
+          let cur = 0;
+          const tick = () => { cur = Math.min(cur + step, target); el.textContent = Math.floor(cur).toLocaleString('en-IN'); if (cur < target) requestAnimationFrame(tick); };
+          tick(); io.unobserve(el);
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.counter').forEach(c => io.observe(c));
+    }
+
+    /* ============================================================
+       CONTACT FORM
+       ============================================================ */
+    function initContactForm() {
+      const btn = document.getElementById('form-submit-btn');
+      const suc = document.getElementById('form-success');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        btn.textContent = 'Sending…'; btn.disabled = true;
+        setTimeout(() => { btn.style.display = 'none'; if (suc) suc.style.display = 'block'; }, 1200);
+      });
+    }
+
+    /* ============================================================
+       NEWSLETTER
+       ============================================================ */
+    function initNewsletter() {
+      const btn = document.getElementById('nl-btn'), input = document.getElementById('nl-input');
+      if (!btn || !input) return;
+      btn.addEventListener('click', () => {
+        if (!input.value.includes('@')) { input.style.borderColor = 'var(--accent)'; return; }
+        btn.textContent = '✓ Subscribed!'; btn.style.background = '#1a7a3c';
+        input.value = ''; input.disabled = true; btn.disabled = true;
+      });
+    }
+
+    /* ============================================================
+       PARTICLES (hero overlay)
+       ============================================================ */
+    function initParticles() {
+      const hero = document.getElementById('hero');
+      if (!hero) return;
+      const overlay = document.createElement('canvas');
+      overlay.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;';
+      hero.appendChild(overlay);
+      const ctx = overlay.getContext('2d');
+      let W, H, particles = [];
+      const resize = () => { W = overlay.width = overlay.offsetWidth; H = overlay.height = overlay.offsetHeight; };
+      resize(); window.addEventListener('resize', resize);
+      class P {
+        constructor() { this.reset(); }
+        reset() { this.x = Math.random() * W; this.y = Math.random() * H; this.vx = (Math.random() - .5) * .3; this.vy = -Math.random() * .5 - .1; this.r = Math.random() * 1.5 + .3; this.a = Math.random() * .35 + .05; }
+        update() { this.x += this.vx; this.y += this.vy; this.a -= .0008; if (this.a <= 0 || this.y < 0) this.reset(); }
+        draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(230,57,70,${this.a})`; ctx.fill(); }
+      }
+      for (let i = 0; i < 70; i++) particles.push(new P());
+      const loop = () => { requestAnimationFrame(loop); ctx.clearRect(0, 0, W, H); particles.forEach(p => { p.update(); p.draw(); }); };
+      loop();
+    }
+  </script>
+</body>
+
+</html>`
